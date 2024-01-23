@@ -102,26 +102,11 @@ isLightboxOpen = true;
 
 });
  
-// function handleKeyDown(event) {
-//   if (event.code === "Escape" || isLightboxOpen === true) {
-//     instance.close();
-//   }
-// }
-
-// function closeLightbox(){
-//   if ( lightbox && lightbox.visible()) {
-//     lightbox.close();
-//     isLightboxOpen = false;
-//     document.removeEventListener("keydown". handleKeyDown)
-//   }
-// }
-
-
 function handleKeyDown(event) {
-  const openInstance = document.querySelector(".basicLightbox")
-  if (event.code === "Escape") {
-      openInstance.remove();
+  if (event.code === "Escape" || isLightboxOpen === true) {
+    instance.close();
   }
-  document.removeEventListener('keydown', handleKeyDown); 
 }
+
+
 
