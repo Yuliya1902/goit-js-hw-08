@@ -68,7 +68,7 @@ const images = [
 
 const ulEl = document.querySelector(".gallery");
 
-const marupGallery = images.map(
+const markupGallery = images.map(
   (image) => `<li class="gallery-item">
   <a class="gallery-link" href="${image.original}">
   <img
@@ -82,7 +82,7 @@ const marupGallery = images.map(
 )
     .join('');
 
-ulEl.innerHTML = marupGallery;
+ulEl.innerHTML = markupGallery;
  let isLightboxOpen = false;
  let instance = null;
 ulEl.addEventListener("click", event => 
@@ -96,14 +96,14 @@ ulEl.addEventListener("click", event =>
 <img src="${event.target.dataset.source}" width="800" height="600">`);
 
 instance.show();
-isLightboxOpen = true;
+
  
     document.addEventListener('keydown', handleKeyDown);
 
 });
  
 function handleKeyDown(event) {
-  if (event.code === "Escape" || isLightboxOpen === true) {
+  if (event.code === "Escape") {
     instance.close();
   }
 }
